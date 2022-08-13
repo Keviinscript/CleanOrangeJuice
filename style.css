@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -37,6 +41,14 @@ ul{
 .menu-links ul li{
     display: inline-block;
     padding-right: 20px;
+}
+
+.menu-links ul li a{
+    color: #000;
+}
+
+.menu-links ul li a:hover{
+ color: #aecd31;
 }
 
 .search,
@@ -93,6 +105,12 @@ ul{
     padding: 10px 30px;
     border-radius: 10px;
 
+}
+
+.more a:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 
 .desc{
@@ -180,7 +198,7 @@ ul{
 
 @media screen and (max-width: 500px){
     body{
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
     .logo{
         font-size: 20px;
@@ -201,12 +219,13 @@ ul{
     .content{
         position: absolute;
         top: 50%;
+        width: 90%;
         left: 50%;
         transform:translate(-50%,-50%);
         display: flex;
         flex-wrap: wrap;
         align-items:center;
-        padding: 0 20px;   
+       
     }
     .tagline{
         flex: 1;
@@ -217,7 +236,7 @@ ul{
     .title{
         position: relative;
         flex: 0 0 100%;
-        font-size: 70px;
+        font-size: 50px;
         text-transform: uppercase;
         font-weight: 700;
         z-index: 999;
@@ -236,11 +255,21 @@ ul{
         background: #000;
         padding: 10px 20px;
         border-radius: 10px;
+        position: relative;
+        z-index: 3;
     
     }
     .desc{
         flex: 0 0 100%;
         z-index: 2 !important;
+    }
+
+    .juice{
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        z-index:-1;
+    
     }
     
     .juice img{
@@ -253,7 +282,7 @@ ul{
         position: absolute;
         top: 50%;
         left: 0;
-        z-index:-1 ;
+        z-index:-2 ;
     }
     
     .leaves img{
@@ -261,31 +290,88 @@ ul{
         max-height: 100%;
     }
     .leaves .layer:nth-child(1){
-        top: -100px !important;
-        left: -250px !important;
+        top: -400px !important;
+        left: -40px !important;
     }
     
-    .leaves .layer:nth-child(2){
-        top: 10px !important;
-        left: 160px !important;
+     .leaves .layer:nth-child(2){
+        top: -150px !important;
+        right: 100px !important;
     }
     
     .leaves .layer:nth-child(3){
-        top: 300px !important;
-        left: 160px !important;
+        top: 270px !important;
+        left: 70px !important;
     }
     
     .leaves .layer:nth-child(4){
-        top: -10px !important;
-        left: 320px !important;
+        top: 150px !important;
+        right: 20px !important;
     }
     
     .leaves .layer:nth-child(5){
-        top: 200px !important;
-        left: -320px !important;
-    }
+        top: 100px !important;
+        right: 20px !important;
+    } 
     
     
 }
 
+/* @media screen and (max-width:1083px) {
+    .logo{
+        font-size: 25px;
+    }
+    .menu-links ul li a{
+        font-size: 10px;
+    }
+    .tagline{
+        flex: 1;
+        font-size: 20px;
+        color: #999;
+    }
+    .title{
+        flex: 0 0 100%;
+        font-size: 150px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    
+}
 
+@media screen and (max-width:885px) {
+    .logo{
+        font-size: 20px;
+    }
+    .menu-links ul li a{
+        font-size: 9px;
+    }
+    .search,
+    .cart{
+        font-size: 15px;
+        color: #aecd31;
+    }
+    .account{
+        font-size: 10px;
+    }
+    .juice img{
+        max-height: 300px;
+        animation: float 4s ease-in-out infinite;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .logo{
+        font-size: 16px;
+    }
+    .menu-links ul li a{
+        font-size: 7px;
+    }
+    .search,
+    .cart{
+        font-size: 10px;
+        color: #aecd31;
+    }
+    .account{
+        font-size: 9px;
+    }
+} */
